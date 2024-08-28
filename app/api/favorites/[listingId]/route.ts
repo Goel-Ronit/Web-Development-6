@@ -12,7 +12,7 @@ export async function POST (request: Request, {params}:{params:IParams}) {
 
     if (!currentUser) {
 
-        throw new Error('No user');
+        return NextResponse.error();
     }
 
     const {listingId} = params;
@@ -44,7 +44,7 @@ export async function DELETE(request: Request, {params}: {params: IParams})
     const currentUser = await getCurrentUser();
 
     if (!currentUser) {
-        throw new Error('No user');
+        return NextResponse.error();
     }
 
     const {listingId} = params;
