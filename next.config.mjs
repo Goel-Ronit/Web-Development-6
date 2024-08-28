@@ -14,12 +14,6 @@ const nextConfig = {
         // !! WARN !!
         ignoreBuildErrors: true,
       },
-      eslint: {
-        ignoreDuringBuilds: true
-      },
-      experimental: {
-        missingSuspenseWithCSRBailout: false,
-      },
 };
 
 export default nextConfig;
